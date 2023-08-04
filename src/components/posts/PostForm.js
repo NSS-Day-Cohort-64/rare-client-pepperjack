@@ -23,9 +23,9 @@ export const PostForm = ({ categories, tags, token }) => {
         };
 
         createPost(newPost)
-            .then((newPost) => {
-                if (newPost) {
-                    navigate(`/posts/${newPost.id}`)
+            .then((response) => {
+                if (response) {
+                    navigate(`/posts/${response.id}`)
                 }
             })
     };
